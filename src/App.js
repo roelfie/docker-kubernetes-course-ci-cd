@@ -1,13 +1,12 @@
-import logo from './logo.svg';
+import background from './background.jpg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <header className="App-header" style={{backgroundImage: `url(${background})`, color: '#000000'}}>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Docker / React app created by ROELFIE
         </p>
         <a
           className="App-link"
@@ -15,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React Now!
+          Learn React
         </a>
       </header>
     </div>
