@@ -1,0 +1,15 @@
+# Build image with
+# docker build -f Dockerfile.dev .
+
+FROM node:18.3.0-alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# For completeness leave in (even though complete /app folder is mapped as a volume in docker-compose.yml)
+COPY . .
+
+CMD ["npm", "run", "start"]
+
