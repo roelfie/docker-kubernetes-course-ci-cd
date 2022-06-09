@@ -19,3 +19,14 @@ docker run -e CI=true roelfie/react-app npm run test
 More info:
 * https://docs.docker.com/engine/reference/run/#env-environment-variables
 * https://create-react-app.dev/docs/running-tests/#continuous-integration
+
+My Travis builds of this GitHub project can be found [here](https://app.travis-ci.com/github/roelfie/docker-kubernetes-travis-ci-cd/builds).
+
+## AWS Elastic BeanStalk
+
+Created an AWS Elastic Beanstalk 
+* Environment: `Dockerreactapp-env`
+* Application: `docker-react-app`
+
+[URL](http://dockerreactapp-env.eba-hteduzif.eu-west-3.elasticbeanstalk.com/)
+
