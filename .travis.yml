@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t roelfie/react-app -f Dockerfile.dev .
+
+# Tell Create React App / Jest to run tests once and exit (instead of showing the interactive CLI).
+script:
+  - docker run -e CI=true roelfie/react-app npm run test
