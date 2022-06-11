@@ -9,6 +9,9 @@ before_install:
 script:
   - docker run -e CI=true roelfie/react-app npm run test
 
+# The following AWS elasticbeanstalk configuration assumes that there already is
+# a beanstalk application of type docker created in AWS.
+# By cloning the git repo into the appropriate S3 bucket, beanstalk will automatically 'docker build' & deploy it.
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-3"
